@@ -15,7 +15,7 @@ function preguntarPresupuesto() {
   const presupuestoUsuario = prompt('Ingresa un presupuesto para que lo podamos gestionar...');
 
   console.log(presupuestoUsuario);
-
+  //en caso de que ingrese texto  isNaN(presupuestoUsuario) 
   if (presupuestoUsuario === '' || preguntarPresupuesto === null || isNaN(presupuestoUsuario) || presupuestoUsuario <= 0) {
     window.location.reload();
   }

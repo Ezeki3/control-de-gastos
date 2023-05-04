@@ -46,6 +46,11 @@ class UI {
 
     // Insertar en el HTML
     document.querySelector('.primario').insertBefore(divMensaje, formulario);
+
+    // Quitamos del HTML
+    setTimeout(() => {
+      divMensaje.remove();
+    }, 3000);
   }
 }
 

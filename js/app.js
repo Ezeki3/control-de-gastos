@@ -9,6 +9,11 @@ function eventtListeners() {
 }
 
 // Clases
+class Presupuesto {
+  constructor(presupuesto) {
+    this.presupuesto = Number(presupuesto)
+  }
+}
 
 // Funciones
 function preguntarPresupuesto() {

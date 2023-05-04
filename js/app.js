@@ -85,5 +85,12 @@ function agregarGasto(e) {
   // Validar
   if (nombre === '' || cantidad === '') {
     ui.ImprimirAlerta('Ambos campos son obligatorios', 'error');
+    return; //en caso de que se cumpla alguna condicion hasta ahi termina y retorna el mensaje
+
+  } else if (cantidad <= 0 || isNaN(cantidad)) {
+    ui.ImprimirAlerta('Cantidad no valida', 'error');
+    return;//en caso de que se cumpla alguna condicion hasta ahi termina y retorna el mensaje
   }
+
+  console.log('agregando gasto');
 }

@@ -19,7 +19,8 @@ class Presupuesto {
   }
 
   nuevoGasto(gasto) {
-    console.log(gasto);
+    this.gastos = [...this.gastos, gasto];
+    console.log(this.gastos);
   }
 }
 
@@ -98,12 +99,18 @@ function agregarGasto(e) {
 
   // Generar un objeto con el gasto
   const gasto = {
-    this: nombre = nombre,
-    this: cantidad = cantidad,
-    id: Date.now()
+    nombre,
+    cantidad,
+    id: Date.now() //hacemos la simulacion de un id con la propiedad Date, devuelve el número de milisegundos transcurridos desde la medianoche del 1 de enero de 1970
   }
 
   // Añadimos un nuevo gasto
   presupuesto.nuevoGasto(gasto);
+
+  // Mandamos el mensaje para que imprima
+  ui.ImprimirAlerta('Gasto agregado correctamente');
+
+  // Reseteamos el formulario
+  formulario.reset();
 
 }

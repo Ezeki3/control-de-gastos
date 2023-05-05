@@ -17,6 +17,10 @@ class Presupuesto {
     this.restante = Number(presupuesto);
     this.gastos = [];
   }
+
+  nuevoGasto(gasto) {
+    console.log(gasto);
+  }
 }
 
 class UI {
@@ -92,5 +96,14 @@ function agregarGasto(e) {
     return;//en caso de que se cumpla alguna condicion hasta ahi termina y retorna el mensaje
   }
 
-  console.log('agregando gasto');
+  // Generar un objeto con el gasto
+  const gasto = {
+    this: nombre = nombre,
+    this: cantidad = cantidad,
+    id: Date.now()
+  }
+
+  // Añadimos un nuevo gasto
+  presupuesto.nuevoGasto(gasto);
+
 }

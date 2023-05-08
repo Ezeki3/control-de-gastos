@@ -20,7 +20,13 @@ class Presupuesto {
 
   nuevoGasto(gasto) {
     this.gastos = [...this.gastos, gasto];
-    console.log(this.gastos);
+    this.calcularRestante();
+  }
+
+  calcularRestante() {
+    const gastado = this.gastos.reduce((total, gasto) => Number(total) + Number(gasto.cantidad), 0);
+    this.restante = this.presupuesto - gastado;
+    console.log(this.restante);
   }
 }
 
@@ -150,6 +156,8 @@ function agregarGasto(e) {
   // Imprimimos solo los gastos 
   const { gastos } = presupuesto;
   ui.agregarGastoListado(gastos);
+
+  ui.actualizarRestante(restante);
 
   // Reseteamos el formulario
   formulario.reset();

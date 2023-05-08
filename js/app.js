@@ -57,6 +57,10 @@ class UI {
       divMensaje.remove();
     }, 3000);
   }
+
+  agregarGastoListado(gastos) {
+    console.log(gastos);
+  }
 }
 
 // Instanciar
@@ -109,6 +113,10 @@ function agregarGasto(e) {
 
   // Mandamos el mensaje para que imprima
   ui.ImprimirAlerta('Gasto agregado correctamente');
+
+  // Imprimimos solo los gastos 
+  const { gastos } = presupuesto;
+  ui.agregarGastoListado(gastos);
 
   // Reseteamos el formulario
   formulario.reset();

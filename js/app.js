@@ -69,8 +69,20 @@ class UI {
       const nuevoGasto = document.createElement('li');
       nuevoGasto.className = 'list-group-item d-flex justify-content-between align-items-center';
       nuevoGasto.dataset.id = id; //seteamos el id al gasto
-      console.log(nuevoGasto);
 
+      // Agregamos el HTML del gasto
+      nuevoGasto.innerHTML = `<span class="text-uppercase">${nombre}</span> <span class="badge badge-primary badge-pill">$ ${cantidad}</span>`;
+
+      // Boton para borrar el gasto
+      const btnBorrar = document.createElement('button');
+      btnBorrar.classList.add('btn', 'btn-danger', 'borrar-gasto');
+      // btnBorrar.textContent = 'Borrar';
+      btnBorrar.innerHTML = 'Borrar &times';
+
+      nuevoGasto.appendChild(btnBorrar);
+
+      // Agregamos al HTML
+      gastoListado.appendChild(nuevoGasto);
     })
   }
 }

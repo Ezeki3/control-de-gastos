@@ -60,6 +60,8 @@ class UI {
 
   agregarGastoListado(gastos) {
 
+    this.limpiarHTML(); //Elimina el html previo
+
     // iteramos sobre los gastos
     gastos.forEach(gasto => {
 
@@ -84,6 +86,13 @@ class UI {
       // Agregamos al HTML
       gastoListado.appendChild(nuevoGasto);
     })
+  }
+
+  limpiarHTML() {
+    // Mientras gastoListado tenga algo. LIMPIAMOS EL HTML
+    while (gastoListado.firstChild) {
+      gastoListado.removeChild(gastoListado.firstChild);
+    }
   }
 }
 

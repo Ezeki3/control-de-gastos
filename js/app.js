@@ -59,7 +59,19 @@ class UI {
   }
 
   agregarGastoListado(gastos) {
-    console.log(gastos);
+
+    // iteramos sobre los gastos
+    gastos.forEach(gasto => {
+
+      const { cantidad, nombre, id } = gasto;
+
+      // creamos un LI 
+      const nuevoGasto = document.createElement('li');
+      nuevoGasto.className = 'list-group-item d-flex justify-content-between align-items-center';
+      nuevoGasto.dataset.id = id; //seteamos el id al gasto
+      console.log(nuevoGasto);
+
+    })
   }
 }
 

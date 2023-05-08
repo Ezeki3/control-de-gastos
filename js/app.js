@@ -100,6 +100,11 @@ class UI {
       gastoListado.removeChild(gastoListado.firstChild);
     }
   }
+
+  actualizarRestante(restante) {
+    // Actualizamos el span de restante
+    document.querySelector('#restante').textContent = presupuesto.restante;
+  }
 }
 
 // Instanciar

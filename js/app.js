@@ -68,7 +68,7 @@ class UI {
     }, 3000);
   }
 
-  agregarGastoListado(gastos) {
+  mostrarGastos(gastos) {
 
     this.limpiarHTML(); //Elimina el html previo
 
@@ -190,7 +190,7 @@ function agregarGasto(e) {
 
   // Imprimimos solo los gastos 
   const { gastos } = presupuesto;
-  ui.agregarGastoListado(gastos);
+  ui.mostrarGastos(gastos);
 
   ui.actualizarRestante(restante);
 
@@ -203,4 +203,6 @@ function agregarGasto(e) {
 
 function eliminarGasto(id) {
   presupuesto.eliminarGasto(id);
+  const { gastos } = presupuesto;
+  ui.mostrarGastos(gastos);
 }

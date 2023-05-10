@@ -109,9 +109,12 @@ class UI {
   comprobarPresupuesto(presupuestoObj) {
     const { presupuesto, restante } = presupuestoObj;
 
+    const restanteDiv = document.querySelector('.restante')
+
     // Comprobar 25%
     if ((presupuesto / 4) > restante) {
-      console.log('gastaste mas de 75%');
+      restanteDiv.classList.remove('alert-success');
+      restanteDiv.classList.add('alert-danger');
     }
   }
 }

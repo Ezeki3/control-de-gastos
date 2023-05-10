@@ -164,6 +164,8 @@ function agregarGasto(e) {
 
   ui.actualizarRestante(restante);
 
+  ui.comprobarPresupuesto(presupuesto);
+
   // Reseteamos el formulario
   formulario.reset();
 

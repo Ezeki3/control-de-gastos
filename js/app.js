@@ -30,7 +30,7 @@ class Presupuesto {
 
   eliminarGasto(id) {
     this.gastos = this.gastos.filter(gasto => gasto.id !== id);
-    console.log(this.gastos);
+    this.calcularRestante();
   }
 }
 
@@ -188,13 +188,13 @@ function agregarGasto(e) {
   // Mandamos el mensaje para que imprima
   ui.ImprimirAlerta('Gasto agregado correctamente');
 
-  // Imprimimos solo los gastos 
-  const { gastos } = presupuesto;
-  ui.mostrarGastos(gastos);
-
   ui.actualizarRestante(restante);
 
   ui.comprobarPresupuesto(presupuesto);
+
+  // Imprimimos solo los gastos 
+  const { gastos } = presupuesto;
+  ui.mostrarGastos(gastos);
 
   // Reseteamos el formulario
   formulario.reset();
@@ -208,4 +208,8 @@ function eliminarGasto(id) {
   // Elimina los gastos del HTML
   const { gastos } = presupuesto;
   ui.mostrarGastos(gastos);
+
+  ui.actualizarRestante(restante);
+
+  ui.comprobarPresupuesto(presupuesto);
 }

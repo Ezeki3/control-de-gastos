@@ -87,6 +87,10 @@ class UI {
       // btnBorrar.textContent = 'Borrar';
       btnBorrar.innerHTML = 'Borrar &times';
 
+      btnBorrar.onclick = () => {
+        eliminarGasto(id);
+      }
+
       nuevoGasto.appendChild(btnBorrar);
 
       // Agregamos al HTML

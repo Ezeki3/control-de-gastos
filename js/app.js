@@ -127,6 +127,10 @@ class UI {
     } else if ((presupuesto / 2) > restante) {
       restanteDiv.classList.remove('alert-success', 'alert-warning');
       restanteDiv.classList.add('alert-warning');
+    } else {
+      //segun se eliminen los gastos pintan de nuevo el restante
+      restanteDiv.classList.remove('alert-danger', 'alert-warning');
+      restanteDiv.classList.add('alert-success');
     }
 
     // Si el total es menor a cero

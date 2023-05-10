@@ -26,7 +26,11 @@ class Presupuesto {
   calcularRestante() {
     const gastado = this.gastos.reduce((total, gasto) => Number(total) + Number(gasto.cantidad), 0);
     this.restante = this.presupuesto - gastado;
-    console.log(this.restante);
+  }
+
+  eliminarGasto(id) {
+    this.gastos = this.gastos.filter(gasto => gasto.id !== id);
+    console.log(this.gastos);
   }
 }
 
@@ -195,4 +199,8 @@ function agregarGasto(e) {
   // Reseteamos el formulario
   formulario.reset();
 
+}
+
+function eliminarGasto(id) {
+  presupuesto.eliminarGasto(id);
 }

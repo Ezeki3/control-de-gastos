@@ -105,6 +105,10 @@ class UI {
     // Actualizamos el span de restante
     document.querySelector('#restante').textContent = presupuesto.restante;
   }
+
+  comprobarPresupuesto(presupuestoObj) {
+    const { presupuesto, restante } = presupuestoObj;
+  }
 }
 
 // Instanciar

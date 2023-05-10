@@ -108,6 +108,11 @@ class UI {
 
   comprobarPresupuesto(presupuestoObj) {
     const { presupuesto, restante } = presupuestoObj;
+
+    // Comprobar 25%
+    if ((presupuesto / 4) > restante) {
+      console.log('gastaste mas de 75%');
+    }
   }
 }
 

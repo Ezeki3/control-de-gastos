@@ -120,6 +120,12 @@ class UI {
       restanteDiv.classList.remove('alert-success', 'alert-warning');
       restanteDiv.classList.add('alert-warning');
     }
+
+    // Si el total es menor a cero
+    if (restante <= 0) {
+      ui.ImprimirAlerta('Haz excedido tu presupuesto', 'error');
+      formulario.querySelector('button[type="submit"]').disabled = true;
+    }
   }
 }
 

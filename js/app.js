@@ -202,7 +202,10 @@ function agregarGasto(e) {
 }
 
 function eliminarGasto(id) {
+  // Elimina el gasto segun su id
   presupuesto.eliminarGasto(id);
+
+  // Elimina los gastos del HTML
   const { gastos } = presupuesto;
   ui.mostrarGastos(gastos);
 }

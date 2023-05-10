@@ -117,7 +117,7 @@ class UI {
       restanteDiv.classList.add('alert-danger');
 
     } else if ((presupuesto / 2) > restante) {
-      restanteDiv.classList.remove('alert-success');
+      restanteDiv.classList.remove('alert-success', 'alert-warning');
       restanteDiv.classList.add('alert-warning');
     }
   }
